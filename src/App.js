@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Main from './components/Main'; 
 import { useState } from 'react';
 
 function App() {
@@ -16,15 +17,12 @@ function App() {
   return (
     <div>
       <Header/>
-      <h1>Nonno-Restaurante</h1>
-      {
-        servicios.map( servicio => (
-            <p>{servicio.id} | {servicio.nombre} | {servicio.precio} </p>
-          ))
-      }
-      <Footer 
-        redsocial={"@facebook"}
-      />
+      <Main/>
+      <Footer/>
+   
+      <div id="copy">
+        <p>© Copyright - Desarrollado por <a href="https://github.com/Mondone" target="_blank">Mondone design</a></p>
+      </div>
     </div>
   );
 }
